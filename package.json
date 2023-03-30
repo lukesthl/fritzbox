@@ -1,6 +1,6 @@
 {
   "name": "@lukesthl/fritzbox",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "A library which implements HTTP digest authentication for axios clients. With generic typescript support",
   "main": "./dist/index.js",
   "files": [
