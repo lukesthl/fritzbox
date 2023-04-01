@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/lukesthl/fritzbox/compare/v1.0.0...v1.0.1) (2023-04-01)
+
+
+### Bug Fixes
+
+* error handling and add docs ([7e2ced7](https://github.com/lukesthl/fritzbox/commit/7e2ced73266b1f42b8e435153c8bdf453dc5167c))
+
 ## 1.0.0 (2023-03-30)
 
 
