@@ -158,6 +158,9 @@ export class Service implements IService {
           };
         };
       };
+      HTML?: {
+        HEAD: { TITLE: string };
+      };
     }>(
       url,
       {
@@ -169,7 +172,7 @@ export class Service implements IService {
       true
     );
     const res: T = {} as T;
-    if (response) {
+    if (response && response['s:Envelope']) {
       const env = response['s:Envelope'];
 
       const resultBody = env['s:Body'];
@@ -183,8 +186,18 @@ export class Service implements IService {
           );
         }
       } else {
-        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-        throw new Error(`Device responded with fault ${resultBody['s:Fault']}`);
+        if (resultBody['s:Fault']) {
+          throw new Error(
+            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+            `Device responded with fault ${resultBody['s:Fault']}`
+          );
+        }
+      }
+    } else {
+      if (response.HTML?.HEAD?.TITLE) {
+        throw new Error(response.HTML.HEAD.TITLE);
+      } else {
+        throw new Error(response.toString());
       }
     }
     return res;

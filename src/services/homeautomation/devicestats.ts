@@ -15,7 +15,7 @@ class DeviceStats {
     await this.fritzbox.init();
     const sid = await this.fritzbox.getSid();
     const xmlClient = new XMLClient();
-    const url = `${this.fritzbox.url.protocol}${this.fritzbox.url.hostname}/webservices/homeautoswitch.lua?switchcmd=getbasicdevicestats&sid=${sid}&ain=${ain}`;
+    const url = `${this.fritzbox.url.protocol}//${this.fritzbox.url.hostname}/webservices/homeautoswitch.lua?switchcmd=getbasicdevicestats&sid=${sid}&ain=${ain}`;
     const response = await xmlClient.request<Response>(url);
     return response.devicestats;
   }

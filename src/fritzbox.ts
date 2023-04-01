@@ -12,6 +12,7 @@ import type { ITr64Desc } from './tr64desc';
 import { Tr64Desc } from './tr64desc';
 import { XMLClient } from './xml.client';
 import { DeviceStats } from './services/homeautomation/devicestats';
+import { Commands } from './commands';
 
 interface IOptions {
   host: string;
@@ -76,7 +77,7 @@ class FritzBox {
     if (this.options.ssl) {
       await this.upgradeSsl();
     }
-    void this.getSid();
+    //  void this.getSid();
     this.initialized = true;
   }
 
@@ -120,15 +121,27 @@ class FritzBox {
         return this.sid;
       }
     }
-    const sid = (await this.deviceConfig.getUrlSID())[
-      'NewX_AVM-DE_UrlSID'
-    ].split('sid=')[1];
+    const response = await this.deviceConfig.getUrlSID();
+    const sid = response['NewX_AVM-DE_UrlSID']?.split('sid=')?.[1];
     if (!sid) {
       throw new Error('No SID found');
     }
     this.sid = sid;
     this.lastSidGeneration = new Date();
     return sid;
+  }
+
+  public async exec<T>({
+    actionName,
+    serviceId,
+    options,
+  }: {
+    serviceId: string;
+    actionName: string;
+    options?: unknown;
+  }): Promise<T> {
+    const command = new Commands();
+    return await command.exec<T>(serviceId, actionName, this.services, options);
   }
 
   private async upgradeSsl(): Promise<void> {

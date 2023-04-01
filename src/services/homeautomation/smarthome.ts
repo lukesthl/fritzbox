@@ -17,8 +17,7 @@ class SmartHome {
   }> {
     await this.fritzbox.init();
     const sid = await this.fritzbox.getSid();
-    const url = `${this.fritzbox.url.protocol}${this.fritzbox.url.hostname}/webservices/homeautoswitch.lua?switchcmd=getdevicelistinfos&sid=${sid}`;
-    console.log(url);
+    const url = `${this.fritzbox.url.protocol}//${this.fritzbox.url.hostname}/webservices/homeautoswitch.lua?switchcmd=getdevicelistinfos&sid=${sid}`;
     const deviceResponse = await new XMLClient().request<DeviceResponse>(url);
     if (!Array.isArray(deviceResponse.devicelist.device)) {
       deviceResponse.devicelist.device = [deviceResponse.devicelist.device];

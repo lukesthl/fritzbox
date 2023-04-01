@@ -4,7 +4,7 @@ import { Axios } from 'axios';
 import { XMLParser } from 'fast-xml-parser';
 
 export class XMLClient {
-  private axiosInstance?: Axios;
+  private axiosInstance = new Axios({});
 
   private xmlParser = new XMLParser({ ignoreAttributes: false });
 

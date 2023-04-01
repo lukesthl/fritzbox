@@ -1,7 +1,7 @@
 {
   "name": "@lukesthl/fritzbox",
   "version": "0.0.0-development",
-  "description": "A library which implements HTTP digest authentication for axios clients. With generic typescript support",
+  "description": "A library for accessing a AVM Fritz!Box via TR-064 and HTTP API.",
   "main": "./dist/index.js",
   "files": [
     "dist/**/*"
@@ -21,13 +21,14 @@
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js",
-    "./services/deviceinfo": "./dist/services/deviceinfo.js",
+    "./*": "./dist/services/*.js",
     "./package.json": "./package.json"
   },
   "typesVersions": {
     "*": {
-      "services/deviceinfo": [
-        "dist/services/deviceinfo.d.ts"
+      "*": [
+        "dist/services/*.d.ts",
+        "dist/index.d.ts"
       ]
     }
   },
@@ -40,10 +41,12 @@
     "node": ">=12.0"
   },
   "keywords": [
-    "axios",
-    "digest-auth",
+    "fritzbox",
+    "avm",
     "typescript",
-    "axios-digest-auth"
+    "tr-064",
+    "http",
+    "api"
   ],
   "bugs": {
     "url": "https://github.com/lukesthl/fritzbox/issues"
