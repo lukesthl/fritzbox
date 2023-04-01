@@ -179,16 +179,16 @@ const ecoStats = await fritzBox.unofficial.ecoStat.getEcoStat();
 
 This is an fork of [@seydx's](https://github.com/seydx/fritzbox) package
 
-[build-img]: https://github.com/lukesthl/ts-axios-digest-auth/actions/workflows/release.yml/badge.svg
-[build-url]: https://github.com/lukesthl/ts-axios-digest-auth/actions/workflows/release.yml
-[downloads-img]: https://img.shields.io/npm/dt/@lukesthl/ts-axios-digest-auth
-[downloads-url]: https://www.npmtrends.com/@lukesthl/ts-axios-digest-auth
-[npm-img]: https://img.shields.io/npm/v/@lukesthl/ts-axios-digest-auth
-[npm-url]: https://www.npmjs.com/package/@lukesthl/ts-axios-digest-auth
-[issues-img]: https://img.shields.io/github/issues/lukesthl/ts-axios-digest-auth
-[issues-url]: https://github.com/lukesthl/ts-axios-digest-auth/issues
-[codecov-img]: https://codecov.io/gh/lukesthl/ts-axios-digest-auth/branch/main/graph/badge.svg
-[codecov-url]: https://codecov.io/gh/lukesthl/ts-axios-digest-auth
+[build-img]: https://github.com/lukesthl/fritzbox/actions/workflows/release.yml/badge.svg
+[build-url]: https://github.com/lukesthl/fritzbox/actions/workflows/release.yml
+[downloads-img]: https://img.shields.io/npm/dt/@lukesthl/fritzbox
+[downloads-url]: https://www.npmtrends.com/@lukesthl/fritzbox
+[npm-img]: https://img.shields.io/npm/v/@lukesthl/fritzbox
+[npm-url]: https://www.npmjs.com/package/@lukesthl/fritzbox
+[issues-img]: https://img.shields.io/github/issues/lukesthl/fritzbox
+[issues-url]: https://github.com/lukesthl/fritzbox/issues
+[codecov-img]: https://codecov.io/gh/lukesthl/fritzbox/branch/main/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/lukesthl/fritzbox
 [semantic-release-img]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-release-url]: https://github.com/semantic-release/semantic-release
 [commitizen-img]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
