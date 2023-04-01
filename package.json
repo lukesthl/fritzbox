@@ -1,7 +1,7 @@
 {
   "name": "@lukesthl/fritzbox",
-  "version": "0.0.0-development",
-  "description": "A library for accessing a AVM Fritz!Box via TR-064 and HTTP API.",
+  "version": "1.0.0",
+  "description": "A library which implements HTTP digest authentication for axios clients. With generic typescript support",
   "main": "./dist/index.js",
   "files": [
     "dist/**/*"
