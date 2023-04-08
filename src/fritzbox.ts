@@ -55,11 +55,11 @@ class FritzBox {
 
   constructor(options?: Partial<IOptions>) {
     this.options = {
-      ...options,
       host: 'fritz.box',
       port: 49000,
       tr064: true,
       ssl: false,
+      ...options,
     };
     this.url = new URL(`http://${this.options.host}:${this.options.port}`);
   }
