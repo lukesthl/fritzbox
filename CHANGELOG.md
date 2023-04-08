@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/lukesthl/fritzbox/compare/v1.0.1...v1.0.2) (2023-04-08)
+
+
+### Bug Fixes
+
+* override options ([4638f85](https://github.com/lukesthl/fritzbox/commit/4638f85a08c77089a49f3bf16b93d0444f0cf5b5))
+
 ## [1.0.1](https://github.com/lukesthl/fritzbox/compare/v1.0.0...v1.0.1) (2023-04-01)
 
 
